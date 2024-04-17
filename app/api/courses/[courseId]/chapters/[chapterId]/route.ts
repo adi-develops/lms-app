@@ -3,13 +3,10 @@ import { auth } from "@clerk/nextjs";
 import { NextResponse } from "next/server";
 import { db } from "@/lib/db";
 
-const token = process.env.MMUX_TOKEN_ID ;
-const secret = process.env.MUX_TOKEN_SECRET ;
-
-const { Video } = new Mux({
-  tokenId: process.env.MUX_TOKEN_ID,
-  tokenSecret: process.env.MUX_TOKEN_SECRET
-});
+const { Video } = new Mux(
+  process.env.MUX_TOKEN_ID!,
+  process.env.MUX_TOKEN_SECRET!
+);
 
 export async function DELETE(
     req: Request,

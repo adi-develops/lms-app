@@ -5,7 +5,7 @@ import axios from "axios";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { cn } from "@/lib/utils";
-import { Course } from "@prisma/client";
+import { Chapter } from "@prisma/client";
 
 import {
   Form,
@@ -24,7 +24,7 @@ import { Editor } from "@/components/editor";
 import { Preview } from "@/components/preview";
 
 interface ChapterDescriptionFormProps {
-  initialData: Course ;
+  initialData: Chapter ;
   courseId: String;
   chapterId: String ;
 }

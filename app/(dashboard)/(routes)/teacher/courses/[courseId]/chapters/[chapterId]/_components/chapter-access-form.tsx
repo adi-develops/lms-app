@@ -5,7 +5,7 @@ import axios from "axios";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { cn } from "@/lib/utils";
-import { Course } from "@prisma/client";
+import { Chapter } from "@prisma/client";
 
 import {
   Form,
@@ -26,7 +26,7 @@ import { Preview } from "@/components/preview";
 import { Checkbox } from "@/components/ui/checkbox";
 
 interface ChapterAccessFormProps {
-  initialData: Course ;
+  initialData: Chapter ;
   courseId: String;
   chapterId: String ;
 }
@@ -91,11 +91,7 @@ export const ChapterAccessForm = ({ initialData, courseId, chapterId }: ChapterA
         )}
         
         </p>}
-      {initialData.description && (
-        <Preview
-          value={initialData.description}
-        />
-      )}
+        
       {isEditing && (
         <Form {...form}>
           <form
