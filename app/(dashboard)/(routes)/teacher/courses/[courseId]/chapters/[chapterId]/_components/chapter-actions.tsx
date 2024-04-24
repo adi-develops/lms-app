@@ -37,7 +37,7 @@ export const ChapterActions = ({
             toast.success('Chapter Unpublished');
           } else {
             await axios.patch(`/api/courses/${courseId}/chapters/${chapterId}/publish`);
-            toast.success('Course Published');
+            toast.success('Chapter Published');
             // confetti.onOpen();
           }
     
